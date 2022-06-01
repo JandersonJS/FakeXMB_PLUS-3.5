@@ -416,8 +416,8 @@ Année de sortie : ${system.releaseYear}</text>
     </image>
     <textlist name="gamelist">
       <selectorColor>${baseColor}</selectorColor>
-      <selectedColor>000000</selectedColor>
-      <primaryColor>ffffff</primaryColor>
+      <selectedColor>ffffff</selectedColor>
+      <primaryColor>000000</primaryColor>
       <secondaryColor>c1c1c1</secondaryColor>
       <fontPath>./art/Cabin-Bold.ttf</fontPath>
       <fontSize>0.030</fontSize>
@@ -546,8 +546,8 @@ Année de sortie : ${system.releaseYear}</text>
     </text>
     <textlist name="gamelist">
       <selectorColor>${baseColor}</selectorColor>
-      <selectedColor>000000</selectedColor>
-      <primaryColor>ffffff</primaryColor>
+      <selectedColor>ffffff</selectedColor>
+      <primaryColor>000000</primaryColor>
       <secondaryColor>c1c1c1</secondaryColor>
       <fontPath>./art/Cabin-Bold.ttf</fontPath>
       <forceUppercase>1</forceUppercase>
