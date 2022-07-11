@@ -63,8 +63,8 @@
 			<fontPath>./art/PhatBoy Slim BoldItalic.otf</fontPath>
 			<fontSize>0.050</fontSize>
 			<alignment>right</alignment>
-			<color>000000</color>
-			<text>3.0</text>
+			<color>${baseColor}</color>
+			<text>3.5</text>
 		</text>
 
 		<image name="progressbar">
