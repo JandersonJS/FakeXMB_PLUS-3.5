@@ -30,7 +30,7 @@
 		<image name="logo" extra="true">
 			<pos>0.140 0.270</pos>
 			<path>./art/splash_batocera.svg</path>
-			<size>0.1 0.15</size>
+			<size>0 0.25</size>
 			<alignment>left</alignment>
 		</image>
 		
