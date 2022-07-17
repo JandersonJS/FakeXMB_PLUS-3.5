@@ -5,9 +5,10 @@
   <view name="system">
     <video name="videobox" extra="true">
       <path>{random}</path>
+      <zIndex>21</zIndex>     
       <origin>0 0</origin>
       <pos>0.730 0.640</pos>
-      <delay>0.20</delay>
+      <delay>0</delay>
       <color>FFFFFFFF</color>
       <effect>none</effect>
       <roundCorners>0.05</roundCorners>

@@ -5,6 +5,7 @@
   <view name="system">
     <image name="box" extra="true">
       <path>{random:thumbnail}</path>
+      <zIndex>21</zIndex>     
       <color>FFFFFFFF</color>
       <origin>0 0</origin>
       <pos>0.730 0.640</pos>
