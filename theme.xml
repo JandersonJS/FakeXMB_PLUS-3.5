@@ -609,7 +609,7 @@ Année de sortie : ${system.releaseYear}</text>
     </image>-->
   </view>
   <view name="system,basic, detailed, grid, Tiles, Carousel, Boxes, grid">
-    <image name="bottom" extra="true">
+    <image name="bottom" extra="static">
       <pos>0 1</pos>
       <origin>0 1</origin>
       <size>1 0.065</size>
