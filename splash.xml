@@ -67,17 +67,20 @@
 			<text>3.5</text>
 		</text>
 
-		<image name="progressbar">
-			<origin>0 0</origin>
-			<!-- <pos>0.6 0.56</pos>
-			<size>0.307 0.045</size> -->
-			<pos>0.263 0.7</pos>
-			<size>0.455 0.065</size>
-			<color>F8F8FF</color>
-		</image>
-		<image name="progressbar:active">
-			<color>${baseColor}</color>
-		</image>
+    <image name="progressbar">
+      <origin>0 0</origin>
+      <pos>0.25 0.87</pos>
+      <size>0.5 0.036</size>
+      <color>6060607F</color>
+      <colorEnd>6060607F</colorEnd>
+      <roundCorners>0.01</roundCorners>
+    </image>
+    <image name="progressbar:active">
+      <tile>true</tile>
+      <path>./art/progress.png</path>
+      <color>${baseColor}</color>
+      <colorEnd>${gradientEndColor}</colorEnd>
+    </image>
 		
 	</view>
 	
