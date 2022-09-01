@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
-Theme: FakeXMB_PLUS
-version: 3.0
+Theme: DynamicBox_PLUS
+version: 1.0
 author: LordOgro
 license: creative commons CC-BY-NC-SA
 originally based on: Carbon 2.0
@@ -42,10 +42,10 @@ originally based on: Carbon 2.0
     <tilesViewName>Vignettes</tilesViewName>
     <basicGridName>Boites</basicGridName>
     <carouselViewName>Carrousel</carouselViewName>
+    <Original>Original</Original>
     <gray>Gris</gray>
     <blue>Bleu</blue>
     <red>Rouge</red>
-    <green>Vert</green>
     <yellow>Jaune</yellow>
     <none>Aucun</none>
     <roundBorderSubsetName>Bords arrondis</roundBorderSubsetName>
@@ -67,16 +67,20 @@ originally based on: Carbon 2.0
 
   <!-- Subset options for color  -->
   <subset name="colorset" displayName="${subset.colorset}">
-    <include name="gray" displayName="${gray}">./art/colors/gray.xml</include>
-    <include name="blue" displayName="${blue}">./art/colors/blue.xml</include>
-    <include name="red" displayName="${red}"/>
-    <include name="green" displayName="${green}">./art/colors/green.xml</include>
-    <include name="yellow" displayName="${yellow}">./art/colors/yellow.xml</include>
-    <include name="violet">./art/colors/violet.xml</include>
-    <include name="cyan">./art/colors/cyan.xml</include>
-    <include name="orange">./art/colors/orange.xml</include>
-    <include name="brawn">./art/colors/brawn.xml</include>
-    <include name="silver">./art/colors/silver.xml</include>
+    <include name="Original" displayName="${Original}">./art/colors/Original.xml</include>
+    <include name="Ripple">./art/colors/Ripple.xml</include>
+    <include name="Halo">./art/colors/Halo.xml</include>
+    <include name="Halo Courage" displayName="${Halo Courage}">./art/colors/Halo Courage.xml</include>
+    <include name="Waves" displayName="${Waves}">./art/colors/Waves.xml</include>
+    <include name="Waves Faded" displayName="${Waves Faded}">./art/colors/Waves Faded.xml</include>
+    <include name="Wasteland" displayName="${Wasteland}">./art/colors/Wasteland.xml</include>
+    <include name="Mercury" displayName="${Mercury}">./art/colors/Mercury.xml</include>
+    <include name="Spotlight Midnight" displayName="${Spotlight Midnight}">./art/colors/Spotlight Midnight.xml</include>
+    <include name="Spotlight Deja Goo" displayName="${Spotlight Deja Goo}">./art/colors/Spotlight Deja Goo.xml</include>
+    <include name="Spotlight Ultraviolet">./art/colors/Spotlight Ultraviolet.xml</include>
+    <include name="Motes">./art/colors/Motes.xml</include>
+    <include name="Sunset" displayName="${Sunset}">./art/colors/Sunset.xml</include>
+    <include name="Game Room">./art/colors/Game Room.xml</include>
   </subset>
 
 
@@ -161,32 +165,44 @@ originally based on: Carbon 2.0
 
   <!-- Subset options for icons  -->
   <subset name="iconset" displayName="${subset.iconset}">
+    <include name="XBOX" displayName="${XBOX}">./art/iconsets/xbox.xml</include>
     <include name="PSX" displayName="${PSX}">./art/iconsets/psx.xml</include>
     <include name="PSX-color" displayName="${PSX-color}">./art/iconsets/psx-color.xml</include>
-    <include name="XBOX" displayName="${XBOX}">./art/iconsets/xbox.xml</include>
     <include name="NES" displayName="${SNES}">./art/iconsets/snes.xml</include>
     <include name="ARCADE" displayName="${ARCADE}">./art/iconsets/arcade.xml</include>
   </subset>
   <view name="system, basic, detailed, grid, Tiles, Carousel, Boxes, grid">
   <subset name="iconset" displayName="${subset.iconset}">
+    <include name="XBOX" displayName="${XBOX}">./art/iconsets/xbox.xml</include>
     <include name="PSX" displayName="${PSX}">./art/iconsets/psx.xml</include>
     <include name="PSX-color" displayName="${PSX-color}">./art/iconsets/psx-color.xml</include>
-    <include name="XBOX" displayName="${XBOX}">./art/iconsets/xbox.xml</include>
     <include name="NES" displayName="${SNES}">./art/iconsets/snes.xml</include>
     <include name="ARCADE" displayName="${ARCADE}">./art/iconsets/arcade.xml</include>
   </subset>
-    <helpsystem name="help">
+    <helpsystem name="help" extra="static">
       <textColor>7d7d7d</textColor>
       <iconColor>7d7d7d</iconColor>
     </helpsystem>
   </view>
+
+
+        <carousel name="systemcarousel">
+            <color>DDEEFFFF</color>
+            <colorEnd>FFFFFFDE</colorEnd>
+            <systemInfoDelay>0,1</systemInfoDelay>
+        </carousel>
+
+
   <view name="system">
       <text name="system_description" extra="static">
       <origin>0.5 0.5</origin>
-      <pos>0.36 0.07</pos>
-      <size>0.38 0.06</size>
-      <forceUppercase>0</forceUppercase>
-      <fontSize>0.035</fontSize>
+      <pos>0.59 0.42</pos>
+      <size>0.78 0</size>
+      <glowSize>1.8</glowSize>
+      <glowColor>00000035</glowColor>
+      <glowOffset>3 2</glowOffset>
+      <forceUppercase>1</forceUppercase>
+      <fontSize>0.020</fontSize>
       <color>FFFFFF</color>
       <zIndex>80</zIndex>
       </text>
@@ -209,7 +225,7 @@ originally based on: Carbon 2.0
     </video>
     <image name="background" extra="static">
       <tile>false</tile>
-      <size>0 1</size>
+      <size>1 1</size>
       <pos>0 0</pos>
       <origin>0 0</origin>
       <path>./art/bg.png</path>
@@ -261,7 +277,7 @@ originally based on: Carbon 2.0
   <feature supported="manufacturer">
     <view name="system">
       <text name="manufacturerName" extra="static">
-        <pos>0.025 0.8</pos>
+        <pos>0.025 0.7</pos>
         <size>0.98 0.15</size>
         <text>Manufacturer : ${system.manufacturer}
 Release Year : ${system.releaseYear}</text>
@@ -280,15 +296,18 @@ Année de sortie : ${system.releaseYear}</text>
   
   <!-- Subset options for screen -->
   <subset name="systemview" displayName="${systemViewName}">
+    <include name="Original_Dynamic" tinyScreen="false">./art/systemview/Original_Dynamic.xml</include>
+    <include name="wheel">./art/systemview/wheel.xml</include>
     <include name="transparent" tinyScreen="false">./art/systemview/transparent.xml</include>
     <include name="horizontal">./art/systemview/horizontal.xml</include>
     <include name="legacy" tinyScreen="false">./art/systemview/legacy.xml</include>
     <include name="simple">./art/systemview/verticalone.xml</include>
     <include name="vertical">./art/systemview/vertical.xml</include>
-    <include name="wheel">./art/systemview/wheel.xml</include>
   </subset>
   <!-- Subset option for System view background -->
   <subset name="systembackground" displayName="${systemBackgroundName}">
+    <include name="3 mini random videos">./art/systemsbk/3smallvideos.xml</include>
+    <include name="mini random video">./art/systemsbk/smallvideo.xml</include>
     <include tinyScreen="false" name="mini-consoles">./art/systemsbk/consoles.xml</include>
     <!-- change default for small screens -->
     <include name="consoles">./art/systemsbk/batomachines.xml</include>
@@ -299,7 +318,6 @@ Année de sortie : ${system.releaseYear}</text>
     <include name="random box">./art/systemsbk/box.xml</include>
     <include name="mini random image">./art/systemsbk/smallscreen.xml</include>
     <include name="mini random box">./art/systemsbk/smallbox.xml</include>
-    <include name="mini random video">./art/systemsbk/smallvideo.xml</include>
   </subset>
   <!-- Fix for controller image size -->
   <include subset="systemview" name="simple">./art/systemview/controllersizefix.xml</include>
@@ -307,11 +325,16 @@ Année de sortie : ${system.releaseYear}</text>
   <include subset="systemview" name="wheel">./art/systemview/controllersizefix.xml</include>
   <!-- Fix for Legacy option in systemview subset : systemInfo colors have to be restored after applying systembackground subset -->
   <include subset="systemview" name="legacy">./art/systemview/legacyfix.xml</include>
-  <view name="screen">
-    <text name="clock">
-      <color>777777FF</color>
+  <!-- Option for logoDynamics image -->
+  <include subset="systemview" name="Original_Dynamic">./art/systemview/logoDynamics.xml</include>
+  <view name="screen" extra="static">
+    <text name="clock" extra="static">
+      <color>ffffff</color>
+      <glowColor>00000035</glowColor>
+      <glowSize>1</glowSize>
+      <glowOffset>3 2</glowOffset>
       <fontSize>0.035</fontSize>
-      <pos>0.90 0.94</pos>
+      <pos>0.89 0.04</pos>
       <size>0.09 0.058</size>
       <alignment>right</alignment>
       <verticalAlignment>center</verticalAlignment>
@@ -412,7 +435,7 @@ Année de sortie : ${system.releaseYear}</text>
       <pos>0.5 0.5</pos>
       <origin>0.5 0.5</origin>
       <minSize>1 1</minSize>
-      <zIndex>13</zIndex>
+      <zIndex>11</zIndex>
     </image>
     <image name="md_fanart" extra="true">
       <pos>0 0</pos>
@@ -479,32 +502,31 @@ Année de sortie : ${system.releaseYear}</text>
       <minSize>1 1</minSize>
       <zIndex>11</zIndex>
     </image>
-    <image name="md_fanart" extra="true">
+    <image name="md_fanart">
       <pos>0 0</pos>
       <size>1 1</size>      
       <origin>0 0</origin>
       <color>808080</color>
-      <zIndex>14</zIndex>
+      <zIndex>12</zIndex>
       <linearSmooth>true</linearSmooth>
-      <tile>false</tile>
     </image>
    <image name="dark" extra="static" tinyScreen="false">
       <tile>false</tile>
       <pos>0.004 0.119</pos>        
       <size>0.525 0.853</size>
       <origin>0 0</origin>
-      <path>./art/dark.png</path>
-      <linearSmooth>true</linearSmooth>      
-      <zIndex>15</zIndex>
+      <path>./art/dark.png</path>  
+      <linearSmooth>true</linearSmooth>    
+      <zIndex>13</zIndex>
     </image>
    <image name="darkwheel" extra="static" tinyScreen="false">
       <tile>false</tile>
       <pos>0.500 0.615</pos>        
       <size>0.51 0.33</size>
       <origin>0 0</origin>
-      <path>./art/darkwheel.png</path>
-      <linearSmooth>true</linearSmooth>      
-      <zIndex>15</zIndex>
+      <path>./art/darkwheel.png</path>   
+      <linearSmooth>true</linearSmooth>   
+      <zIndex>13</zIndex>
     </image>
     <text name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_players, md_players, md_lbl_releasedate">
       <color>000000</color>
@@ -628,7 +650,7 @@ Année de sortie : ${system.releaseYear}</text>
       <zIndex>60</zIndex>
     </image>-->
   </view>
-  <view name="system,basic, detailed, grid, Tiles, Carousel, Boxes, grid">
+  <view name="system">
     <image name="bottom" extra="static">
       <pos>0 1</pos>
       <origin>0 1</origin>
@@ -637,7 +659,7 @@ Année de sortie : ${system.releaseYear}</text>
       <color>${bottomBarColor}</color>
       <zIndex>13</zIndex>
     </image>
-    <image name="top-shadow" extra="true">
+    <image name="top-shadow" extra="static">
       <path>./art/shadow.png</path>
       <color>FFFFFF90</color>
       <pos>0 0.16</pos>
@@ -645,7 +667,53 @@ Année de sortie : ${system.releaseYear}</text>
       <size>1 0.04</size>
       <zIndex>11</zIndex>
     </image>
-    <image name="top" extra="true">
+    <image name="top" extra="static">
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <size>1 0.16</size>
+      <path>./art/top.png</path>
+      <color>${baseColor}</color>
+    </image>
+    <text name="logoText">
+      <pos>0.02 0.02</pos>
+      <size>0.98 0.126</size>
+      <alignment>center</alignment>
+      <fontSize>0.08</fontSize>
+      <fontPath>./art/Cabin-Bold.ttf</fontPath>
+      <!--<alignment>left</alignment>-->
+      <color>${baseColor}</color>
+      <!-- <forceUppercase>true</forceUppercase>-->
+    </text>
+	    
+    <text name="folderpath">
+      <pos>0.05 0.132</pos>
+      <size>0.90 0.02</size>  
+      <color>B0B0B0</color>  
+      <alignment>center</alignment>
+      <fontSize>0.016</fontSize>
+      <fontPath>./art/Cabin-Bold.ttf</fontPath>
+      <forceUppercase>true</forceUppercase>
+      <zIndex>200</zIndex>
+    </text>  
+  </view>
+  <view name="basic, detailed, grid, Tiles, Carousel, Boxes, grid">
+    <image name="bottom" extra="static">
+      <pos>0 1</pos>
+      <origin>0 1</origin>
+      <size>1 0.065</size>
+      <path>./art/bottom.png</path>
+      <color>${bottomBarColor}</color>
+      <zIndex>13</zIndex>
+    </image>
+    <image name="top-shadow" extra="static">
+      <path>./art/shadow.png</path>
+      <color>FFFFFF90</color>
+      <pos>0 0.16</pos>
+      <origin>0 0</origin>
+      <size>1 0.04</size>
+      <zIndex>11</zIndex>
+    </image>
+    <image name="top" extra="static">
       <pos>0 0</pos>
       <origin>0 0</origin>
       <size>1 0.16</size>
@@ -699,12 +767,24 @@ Année de sortie : ${system.releaseYear}</text>
     </text>  
   </view>
   <view name="grid">
-    <image name="background">
-      <tile>true</tile>
+    <image name="background" extra="true">
+      <tile>false</tile>
+      <linearSmooth>true</linearSmooth>
+      <path>./art/background/${system.theme}.jpg</path>
+      <color>FFFFFFFF</color>
+      <pos>0.5 0.5</pos>
+      <origin>0.5 0.5</origin>
+      <minSize>1 1</minSize>
+      <zIndex>0</zIndex>
+    </image>
+    <image name="md_fanart" extra="true">
       <pos>0 0</pos>
+      <size>1 1</size>      
       <origin>0 0</origin>
-      <size>1 1</size>
-      <path>${backgroundImage}</path>
+      <color>808080</color>
+      <zIndex>1</zIndex>
+      <linearSmooth>true</linearSmooth>
+      <tile>false</tile>
     </image>
     <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_players, md_lbl_lastplayed, md_lbl_playcount">
       <color>A0A0B000</color>
@@ -728,7 +808,7 @@ Année de sortie : ${system.releaseYear}</text>
       <origin>0.5 0.5</origin>
       <color>808080</color>
       <zIndex>1</zIndex>
-      <linearSmooth>true</linearSmooth>
+<linearSmooth>true</linearSmooth>
     </image>
 -->
 
@@ -792,6 +872,25 @@ Année de sortie : ${system.releaseYear}</text>
     </ninepatch>
   </view>
   <customView name="Boxes" inherits="grid" displayName="${basicGridName}">
+    <image name="background" extra="true">
+      <tile>false</tile>
+      <linearSmooth>true</linearSmooth>
+      <path>./art/background/${system.theme}.jpg</path>
+      <color>FFFFFFFF</color>
+      <pos>0.5 0.5</pos>
+      <origin>0.5 0.5</origin>
+      <minSize>1 1</minSize>
+      <zIndex>0</zIndex>
+    </image>
+    <image name="md_fanart" extra="true">
+      <pos>0 0</pos>
+      <size>1 1</size>      
+      <origin>0 0</origin>
+      <color>808080</color>
+      <zIndex>1</zIndex>
+      <linearSmooth>true</linearSmooth>
+      <tile>false</tile>
+    </image>
     <imagegrid name="gamegrid">
       <autoLayout>6 2</autoLayout>
       <autoLayoutSelectedZoom>1.08</autoLayoutSelectedZoom>
@@ -812,6 +911,25 @@ Année de sortie : ${system.releaseYear}</text>
     </image>
   </customView>
   <customView name="Carousel" inherits="grid" tinyScreen="false" displayName="${carouselViewName}">
+    <image name="background" extra="true">
+      <tile>false</tile>
+      <linearSmooth>true</linearSmooth>
+      <path>./art/background/${system.theme}.jpg</path>
+      <color>FFFFFFFF</color>
+      <pos>0.5 0.5</pos>
+      <origin>0.5 0.5</origin>
+      <minSize>1 1</minSize>
+      <zIndex>0</zIndex>
+    </image>
+    <image name="md_fanart" extra="true">
+      <pos>0 0</pos>
+      <size>1 1</size>      
+      <origin>0 0</origin>
+      <color>808080</color>
+      <zIndex>1</zIndex>
+      <linearSmooth>true</linearSmooth>
+      <tile>false</tile>
+    </image>
     <text name="md_name">
       <color>ffffffff</color>
       <pos>0.04 0.76</pos>
@@ -869,6 +987,25 @@ Année de sortie : ${system.releaseYear}</text>
     </ninepatch>
   </customView>
   <customView name="Tiles" inherits="grid" displayName="${tilesViewName}">
+    <image name="background" extra="true">
+      <tile>false</tile>
+      <linearSmooth>true</linearSmooth>
+      <path>./art/background/${system.theme}.jpg</path>
+      <color>FFFFFFFF</color>
+      <pos>0.5 0.5</pos>
+      <origin>0.5 0.5</origin>
+      <minSize>1 1</minSize>
+      <zIndex>0</zIndex>
+    </image>
+    <image name="md_fanart" extra="true">
+      <pos>0 0</pos>
+      <size>1 1</size>      
+      <origin>0 0</origin>
+      <color>808080</color>
+      <zIndex>1</zIndex>
+      <linearSmooth>true</linearSmooth>
+      <tile>false</tile>
+    </image>
     <imagegrid name="gamegrid">
       <autoLayout>3 2</autoLayout>
       <autoLayoutSelectedZoom>1.03</autoLayoutSelectedZoom>
@@ -927,7 +1064,7 @@ Année de sortie : ${system.releaseYear}</text>
     </image>
   </customView>
   <!-- Subset options for help -->
-  <subset name="helpsystem" displayName="${helpSubsetName}">
+  <subset name="helpsystem" displayName="${helpSubsetName}" extra="static">
     <include name="standard"/>
     <include name="colored" displayName="${colored}">./art/systemview/colorhelp.xml</include>
   </subset>
