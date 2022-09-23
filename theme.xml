@@ -311,7 +311,7 @@ Année de sortie : ${system.releaseYear}</text>
     <text name="clock">
       <color>777777FF</color>
       <fontSize>0.035</fontSize>
-      <pos>0.90 0.97</pos>
+      <pos>0.90 0.935</pos>
       <size>0.09 0.058</size>
       <alignment>right</alignment>
       <verticalAlignment>center</verticalAlignment>
