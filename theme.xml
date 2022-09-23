@@ -121,7 +121,6 @@ originally based on: Carbon 2.0
 	<include name="sephirot" displayName="Sephirot">./art/avatars/sephirot.xml</include>
 	<include name="sonic" displayName="Sonic">./art/avatars/sonic.xml</include>
 	<include name="wonderboy" displayName="Wonderboy">./art/avatars/wonderboy.xml</include>
-	<include name="pajarorrojo" displayName="pajarorrojo">./art/avatars/pajarorrojo.xml</include>	
 </subset>  
 
 
