@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
-Theme: FakeXMB_PLUS
-version: 3.0
+The FakeXMB was made to look like the official Playstation 3 XMB, and has an information bar very similar to the Top-Info of the Playstation-X theme.
+It has monochrome logos in the system view, used in various themes and with various colors, in our case just gray, used mainly in RVGM-BT.
+FakeXMB is a free theme and can be used on your preferred system.
+Enjoy!
+Special thanx: Pajarorojo, Fabrice Caruso and Darknior.
+Theme: FakeXMB
 author: LordOgro
 license: creative commons CC-BY-NC-SA
-originally based on: Carbon 2.0
 -->
 <theme defaultView="detailed">
   <formatVersion>7</formatVersion>
-    <include>./top-info.xml</include>
+    <include>./info.xml</include>
     <include>./infos/${system.theme}.xml</include>
     <include>./custom-username.xml</include>
   <variables>
@@ -69,7 +72,7 @@ originally based on: Carbon 2.0
   <subset name="colorset" displayName="${subset.colorset}">
     <include name="gray" displayName="${gray}">./art/colors/gray.xml</include>
     <include name="blue" displayName="${blue}">./art/colors/blue.xml</include>
-    <include name="red" displayName="${red}"/>
+    <include name="red" displayName="${red}">./art/colors/red.xml</include>
     <include name="green" displayName="${green}">./art/colors/green.xml</include>
     <include name="yellow" displayName="${yellow}">./art/colors/yellow.xml</include>
     <include name="violet">./art/colors/violet.xml</include>
@@ -129,32 +132,8 @@ originally based on: Carbon 2.0
 <!--NICKNAMES-->
 <subset name="system-username" displayName="${theme.username}">
 	<include name="custom" displayName="${custom}">./custom-username.xml</include>
- 	<include name="playstation-x" displayName="Playstation-X">./art/usernames/playstation-x.xml</include>  
 	<include name="cheevos" displayName="Retroachievements ID">./art/usernames/cheevos.xml</include>
-	<include name="batocera" displayName="Batocera">./art/usernames/batocera.xml</include>
-	<include name="batocera-plus" displayName="Batocera Plus">./art/usernames/batocera-plus.xml</include>
-	<include name="cloud" displayName="Cloud Strife">./art/usernames/cloud.xml</include>
-	<include name="emulationstation" displayName="EmulationStation">./art/usernames/emulationstation.xml</include>
-	<include name="ezio" displayName="Ezio Auditore">./art/usernames/ezio.xml</include>
-	<include name="belmont" displayName="Gabriel Belmont">./art/usernames/belmont.xml</include>
-	<include name="geralt" displayName="Geralt of Rivia">./art/usernames/geralt.xml</include>
-	<include name="guybrush" displayName="Guybrush Threepwood">./art/usernames/guybrush.xml</include>
-	<include name="jackelguapo" displayName="Handsome Jack">./art/usernames/jackelguapo.xml</include>
-	<include name="kratos" displayName="Kratos">./art/usernames/kratos.xml</include>
-	<include name="laracroft" displayName="Lara Croft">./art/usernames/laracroft.xml</include>
-	<include name="larry" displayName="Larry Laffer">./art/usernames/larry.xml</include>
-	<include name="linkzelda" displayName="Link">./art/usernames/linkzelda.xml</include>
-	<include name="megaman" displayName="Mega-Man">./art/usernames/megaman.xml</include>
-	<include name="nathandrake" displayName="Nathan Drake">./art/usernames/nathandrake.xml</include>
-	<include name="recalbox" displayName="Recalbox">./art/usernames/recalbox.xml</include>
-	<include name="retroarch" displayName="RetroArch">./art/usernames/retroarch.xml</include>
-	<include name="retrobat" displayName="Retrobat">./art/usernames/retrobat.xml</include>
-	<include name="samus" displayName="Samus Aran">./art/usernames/samus.xml</include>
-	<include name="sephirot" displayName="Sephirot">./art/usernames/sephirot.xml</include>
-	<include name="solidsnake" displayName="Solid Snake">./art/usernames/solidsnake.xml</include>
-	<include name="sonic" displayName="Sonic the Hedgehog">./art/usernames/sonic.xml</include>
-	<include name="subzero" displayName="Sub Zero">./art/usernames/subzero.xml</include>
-	<include name="pajarorrojo" displayName="pajarorrojo">./art/usernames/pajarorrojo.xml</include>
+	<include name="netplay" displayName="Netplay ID">./art/usernames/netplay.xml</include>
 </subset>  
 
 
@@ -179,16 +158,23 @@ originally based on: Carbon 2.0
       <iconColor>7d7d7d</iconColor>
     </helpsystem>
   </view>
-  <view name="system">
+  <view name="system, basic, detailed, grid, Tiles, Carousel, Boxes, grid">
       <text name="system_description" extra="static">
       <origin>0.5 0.5</origin>
-      <pos>0.36 0.07</pos>
-      <size>0.38 0.06</size>
+      <pos>0.852 0.147</pos>
+      <size>0.28 0.06</size>
       <forceUppercase>0</forceUppercase>
-      <scrollLoop>true</scrollLoop>
       <fontSize>0.035</fontSize>
-      <color>FFFFFF</color>
-      <zIndex>80</zIndex>
+      <color>ffffff</color>
+      <fontPath>./fonts/SST Light.ttf</fontPath>
+      <fontSize>0.025</fontSize>
+      <alignment>left</alignment>
+      <glowColor>00000035</glowColor>
+      <glowSize>1</glowSize>
+      <glowOffset>3 2</glowOffset>
+      <autoScroll>horizontal</autoScroll>
+      <visible>true</visible>
+      <zIndex>99</zIndex>
       </text>
 
     <!-- Used by random box need to be declared there -->
@@ -200,6 +186,7 @@ originally based on: Carbon 2.0
       <zIndex>12</zIndex>
       <visible>false</visible>
     </image>
+
     <video name="videobox" extra="true">
       <pos>0.50 0.18</pos>
       <origin>0.5 0.5</origin>
@@ -257,27 +244,109 @@ originally based on: Carbon 2.0
       <zIndex>50</zIndex>
     </image>
   </view>
-  
+    
   <feature supported="manufacturer">
     <view name="system">
       <text name="manufacturerName" extra="static">
-        <pos>0.025 0.8</pos>
-        <size>0.98 0.15</size>
-        <text>Manufacturer : ${system.manufacturer}
-Release Year : ${system.releaseYear}</text>
-        <text lang="fr">Constructeur : ${system.manufacturer}
-Année de sortie : ${system.releaseYear}</text>
+        <text>${system.sortedBy}</text>
         <alignment>left</alignment>
-        <fontPath>./art/Cabin-Regular.ttf</fontPath>
-        <fontSize>0.024</fontSize>
-        <glowSize>1</glowSize>
-        <glowColor>${glowColor}</glowColor>
+        <verticalAlignment>top</verticalAlignment>
+        <fontPath>./../art/fonts/Cabin-Regular.ttf</fontPath>
+        <fontSize>0.060</fontSize>
+        <pos>0.029 0.037</pos>
+        <size>0.942 0.28</size>
         <color>C0C0C0</color>      
         <zIndex>100</zIndex>
+        <color>D0D0D0FF</color>
+        <glowColor>00000080</glowColor>
+        <glowSize>1</glowSize>
+
+        <fontSize tinyScreen="true">0.065</fontSize>
+        <glowSize tinyScreen="true">1</glowSize>
       </text>
+      <text name="fullName" extra="true">
+        <text>${system.fullName}</text>
+        <alignment>left</alignment>
+        <verticalAlignment>top</verticalAlignment>
+        <fontPath>./../art/fonts/Cabin-Regular.ttf</fontPath>
+        <fontSize>0.024</fontSize>
+        <pos>0.03 0.12</pos>
+        <pos verticalScreen="true">0.03 0.10</pos>         
+        <size>0.94 0.28</size>
+        <zIndex>100</zIndex>
+        <color>D0D0D0FF</color>
+        <glowColor>000000A0</glowColor>
+        <glowSize>1</glowSize>
+        
+        <pos tinyScreen="true">0.03 0.13</pos>
+        <glowColor tinyScreen="true">00000040</glowColor>
+        <fontSize tinyScreen="true">0.035</fontSize>
+      </text>
+      <text name="releaseYyear" extra="true">
+        <text>${system.releaseYearOrNull}</text>
+        <alignment>left</alignment>
+        <verticalAlignment>top</verticalAlignment>
+        <fontPath>./../art/fonts/Cabin-Regular.ttf</fontPath>
+        <fontSize>0.024</fontSize>
+        <pos>0.03 0.157</pos>
+        <pos verticalScreen="true">0.03 0.127</pos>         
+        <size>0.94 0.28</size>        
+        <zIndex>100</zIndex>
+        <color>D0D0D0FF</color>
+        <glowColor>000000A0</glowColor>
+        <glowSize>1</glowSize>
+                
+        <pos tinyScreen="true">0.03 0.19</pos>
+        <glowColor tinyScreen="true">00000040</glowColor>
+        <fontSize tinyScreen="true">0.035</fontSize>
+      </text> 
     </view>
-  </feature>
-  
+  </feature> 
+ 
+  <view name="system">
+    <text name="systemInfo" visible="false"/>
+    <text name="systemInfoEx" extra="true">
+      <!-- possible bindings are :
+{binding:total}, {binding:played}, {binding:favorites}, {binding:hidden}, {binding:gamesPlayed}
+{binding:mostPlayed}, {binding:lastPlayedDate}
+-->
+      <text>Games : {binding:total}
+Favorites : {binding:favorites}
+Games played : {binding:gamesPlayed}
+Most played : {binding:mostPlayed}
+Last played : {binding:lastPlayedDate}</text>
+      <text lang="fr">Nombre de jeux : {binding:total}
+Favoris : {binding:favorites}
+Jeux joués : {binding:gamesPlayed}
+Le plus joué : {binding:mostPlayed}
+Dernière partie : {binding:lastPlayedDate}</text>
+      <text lang="es">Número de juegos : {binding:total}
+Favoritos : {binding:favorites}
+Jugados : {binding:gamesPlayed}
+El más jugado : {binding:mostPlayed}
+Última partida : {binding:lastPlayedDate}</text>
+      <alignment>left</alignment>
+      <verticalAlignment>center</verticalAlignment>
+      <fontPath>./art/fonts/Cabin-Regular.ttf</fontPath>
+      <fontSize>0.024</fontSize>
+      <pos>0.03 0.64</pos>
+      <size>0.94 0.28</size>
+      <zIndex>100</zIndex>
+      <color>D0D0D0FF</color>
+      <glowColor>000000A0</glowColor>
+      <glowSize>1</glowSize>
+    </text>
+    <text name="systemInfoEx" extra="true" if="{system.name} == 'collections'">
+      <text>Collections : {binding:subSystems}</text>
+      <text lang="fr">Nombre de collections : {binding:subSystems}</text>
+    </text>
+    <text name="systemInfoEx" extra="true" if="{system.name} == 'library' || {system.name} == 'screenshots'">
+      <text>Items : {binding:total}</text>
+      <text lang="fr">Nombre d'élements : {binding:total}</text>
+      <text lang="es">Número de elementos: {binding:total}</text>
+    </text>
+  </view>
+
   <!-- Subset options for screen -->
   <subset name="systemview" displayName="${systemViewName}">
     <include name="transparent" tinyScreen="false">./art/systemview/transparent.xml</include>
@@ -287,6 +356,7 @@ Année de sortie : ${system.releaseYear}</text>
     <include name="vertical">./art/systemview/vertical.xml</include>
     <include name="wheel">./art/systemview/wheel.xml</include>
   </subset>
+
   <!-- Subset option for System view background -->
   <subset name="systembackground" displayName="${systemBackgroundName}">
     <include tinyScreen="false" name="mini-consoles">./art/systemsbk/consoles.xml</include>
@@ -301,6 +371,7 @@ Année de sortie : ${system.releaseYear}</text>
     <include name="mini random box">./art/systemsbk/smallbox.xml</include>
     <include name="mini random video">./art/systemsbk/smallvideo.xml</include>
   </subset>
+
   <!-- Fix for controller image size -->
   <include subset="systemview" name="simple">./art/systemview/controllersizefix.xml</include>
   <include subset="systemview" name="vertical">./art/systemview/controllersizefix.xml</include>
@@ -308,101 +379,144 @@ Année de sortie : ${system.releaseYear}</text>
   <!-- Fix for Legacy option in systemview subset : systemInfo colors have to be restored after applying systembackground subset -->
   <include subset="systemview" name="legacy">./art/systemview/legacyfix.xml</include>
   <view name="screen">
-    <text name="clock">
-      <color>777777FF</color>
-      <fontSize>0.035</fontSize>
-      <pos>0.90 0.935</pos>
-      <size>0.09 0.058</size>
-      <alignment>right</alignment>
-      <verticalAlignment>center</verticalAlignment>
-    </text>
+
+      <text name="clock">
+         <size>0.09 0.058</size>
+         <color>ffffff</color>
+         <fontPath>./fonts/SST Light.ttf</fontPath>
+         <pos>0.874 0.070</pos>
+         <fontSize>0.025</fontSize>
+         <alignment>left</alignment>
+         <glowColor>00000035</glowColor>
+         <glowSize>1</glowSize>
+         <glowOffset>3 2</glowOffset>
+         <zIndex>99</zIndex>
+         <backgroundColor>ff000000</backgroundColor>
+         <verticalAlignment>center</verticalAlignment>
+      </text>
+
     <!--
-    <controllerActivity name="controllerActivity" tinyScreen="true">
-     <visible>false</visible>
-    </controllerActivity>
+      <controllerActivity name="controllerActivity" tinyScreen="true">
+         <visible>false</visible>
+      </controllerActivity>
 -->
-    <batteryIndicator name="batteryIndicator" tinyScreen="true">
-      <pos>0.955 0.0125</pos>
-      <size>0.033 0.033</size>
+    <controllerActivity name="controllerActivity">
+      <itemSpacing>0.003</itemSpacing>
+      <color>FFFFFF</color>
+      <!-- controllers -->
+      <gunPath>./art/gun.svg</gunPath>
+      <activityColor>ffffff90</activityColor>
+      <hotkeyColor>FFFFFF</hotkeyColor>
+      <!-- wifi 
+      <networkIcon>./art/icons/Network.png</networkIcon>
+      -->
+      <!-- battery 
+      <incharge>./art/battery/incharge.svg</incharge>
+      <full>./art/battery/full.svg</full>
+      <at75>./art/battery/75.svg</at75>
+      <at50>./art/battery/50.svg</at50>
+      <at25>./art/battery/25.svg</at25>
+      <empty>./art/battery/empty.svg</empty>-->
+    </controllerActivity>
+    <batteryIndicator name="batteryIndicator">
+      <pos>0.965 0.082</pos>
+      <size>0.035 0.035</size>
+      <horizontalAlignment>right</horizontalAlignment>
       <incharge>./art/battery/incharge.svg</incharge>
       <full>./art/battery/full.svg</full>
       <at75>./art/battery/75.svg</at75>
       <at50>./art/battery/50.svg</at50>
       <at25>./art/battery/25.svg</at25>
       <empty>./art/battery/empty.svg</empty>
-      <color>FFFFFFA0</color>
+      <!-- wifi -->
+      <!--    <networkIcon>./art/icons/Network.png</networkIcon>-->
+      <!--<networkIcon>none</networkIcon>-->
+      <color>FFFFFF</color>
     </batteryIndicator>
     <batteryIndicator name="batteryIndicator" tinyScreen="true">
-      <pos>0.915 0.013</pos>
-      <size>0.07 0.07</size>
+      <pos>0.935 0.935</pos>
+      <origin>0 0</origin>
+      <size>0.05 0.07</size>
     </batteryIndicator>
   </view>
-  <view name="menu">
-    <menuText name="menutitle">
-      <fontPath>./art/Cabin-Bold.ttf</fontPath>
-      <fontSize>0.044</fontSize>
-      <color>FAFAFA</color>
-    </menuText>
-    <menuText name="menufooter">
-      <fontPath>./art/Cabin-Regular.ttf</fontPath>
-      <fontSize>0.02</fontSize>
-      <color>777777FF</color>
-    </menuText>
-    <menuText name="menutext">
-      <fontPath>./art/Cabin-Regular.ttf</fontPath>
-      <fontSize>0.028</fontSize>
-      <color>969696</color>
-      <separatorColor>323232FF</separatorColor>
-      <selectorColor>${baseColor}</selectorColor>
-      <selectorColorEnd>${gradientEndColor}</selectorColorEnd>
-      <selectedColor>FFFFFF</selectedColor>
-      <selectorGradientType>horizontal</selectorGradientType>
-    </menuText>
-    <menuTextSmall name="menutextsmall">
-      <fontPath>./art/Cabin-Regular.ttf</fontPath>
-      <fontSize>0.02</fontSize>
-      <color>${groupColor}</color>
-    </menuTextSmall>
-    <menuGroup name="menugroup">
-      <fontPath>./art/Cabin-Bold.ttf</fontPath>
-      <fontSize>0.025</fontSize>
-      <color>${groupColor}</color>
-      <separatorColor>${groupSeparatorColor}</separatorColor>
-      <backgroundColor>00000000</backgroundColor>
-      <lineSpacing>2.5</lineSpacing>
-    </menuGroup>
-    <menuBackground name="menubg">
-      <color>242424</color>
-      <cornerSize>32 32</cornerSize>
-      <path>./art/frame.png</path>
-    </menuBackground>
-    <menuIcons name="menuicons">
-      <iconKodi>./art/icons/Kodi.png</iconKodi>
-      <iconSystem>./art/icons/System.png</iconSystem>
-      <iconUpdates>./art/icons/Updates.png</iconUpdates>
-      <iconGames>./art/icons/Games.png</iconGames>
-      <iconControllers>./art/icons/Controllers.png</iconControllers>
-      <iconUI>./art/icons/UI.png</iconUI>
-      <iconSound>./art/icons/Sound.png</iconSound>
-      <iconNetwork>./art/icons/Network.png</iconNetwork>
-      <iconScraper>./art/icons/Scraper.png</iconScraper>
-      <iconAdvanced>./art/icons/Advanced.png</iconAdvanced>
-      <iconQuit>./art/icons/Quit.png</iconQuit>
-      <iconRestart>./art/icons/Restart.png</iconRestart>
-      <iconShutdown>./art/icons/Shutdown.png</iconShutdown>
-      <iconFastShutdown>./art/icons/Fastshutdown.png</iconFastShutdown>
-      <iconRetroachievements>./art/icons/Contest.png</iconRetroachievements>
-      <iconManual>./art/icons/Manual.png</iconManual>
-    </menuIcons>
-    <menuTextEdit name="menutextedit">
-      <inactive>./art/textinput_ninepatch.png</inactive>
-      <active>./art/textinput_ninepatch_active.png</active>
-    </menuTextEdit>
-    <menuButton name="menubutton">
-      <path>./art/button.png</path>
-      <filledPath>./art/button_filled.png</filledPath>
-    </menuButton>
-  </view>
+
+    <view name="menu">
+        <menuText name="menutitle">
+            <fontPath>./main/fonts/Exo2-BoldCondensed.otf</fontPath>
+            <fontSize>0.042</fontSize>
+            <color>FFFFFF</color>
+        </menuText>
+
+        <menuText name="menufooter">
+            <fontPath>./main/fonts/Exo2-BoldCondensed.otf</fontPath>
+            <fontSize>0.020</fontSize>
+            <color>ffffff</color>
+        </menuText>
+
+        <menuText name="menutext">
+            <fontPath>./main/fonts/Exo2-RegularCondensed.otf</fontPath>
+            <fontSize>0.031</fontSize>
+            <color>EEEEEE</color>
+            <separatorColor>FEFEFE</separatorColor>
+            <selectorColor>${baseColor}</selectorColor>
+            <selectorColorEnd>${baseColor}</selectorColorEnd>
+            <selectedColor>262626</selectedColor>
+            <selectorGradientType>horizontal</selectorGradientType>
+        </menuText>
+
+        <menuTextSmall name="menutextsmall">
+            <fontPath>./main/fonts/Exo2-RegularCondensed.otf</fontPath>
+            <fontSize>0.032</fontSize>
+            <color>ffffff</color>
+        </menuTextSmall>
+
+        <!---
+        <menuGroup name="menugroup">
+            <fontPath>./main/Cabin-Bold.ttf</fontPath>
+            <fontSize>0.025</fontSize>
+            <color>${groupColor}</color>
+            <separatorColor>${groupSeparatorColor}</separatorColor>
+            <backgroundColor>00000000</backgroundColor>
+            <lineSpacing>2.5</lineSpacing>
+        </menuGroup>
+        --->
+
+        <menuBackground name="menubg">
+      	    <color>${baseColor}99</color>
+            <cornerSize>32 32</cornerSize>
+            <path>./main/midia/frame.png</path>
+        </menuBackground>
+
+        <menuIcons name="menuicons">
+            <iconKodi>./art/icons/Kodi.png</iconKodi>
+            <iconSystem>./art/icons/System.png</iconSystem>
+            <iconUpdates>./art/icons/Updates.png</iconUpdates>
+            <iconGames>./art/icons/Games.png</iconGames>
+            <iconControllers>./art/icons/Controllers.png</iconControllers>
+            <iconUI>./art/icons/UI.png</iconUI>
+            <iconSound>./art/icons/Sound.png</iconSound>
+            <iconNetwork>./art/icons/Network.png</iconNetwork>
+            <iconScraper>./art/icons/Scraper.png</iconScraper>
+            <iconAdvanced>./art/icons/Advanced.png</iconAdvanced>
+            <iconQuit>./art/icons/Quit.png</iconQuit>
+            <iconRestart>./art/icons/Restart.png</iconRestart>
+            <iconShutdown>./art/icons/Shutdown.png</iconShutdown>
+            <iconFastShutdown>./art/icons/Fastshutdown.png</iconFastShutdown>
+            <iconRetroachievements>./art/icons/Contest.png</iconRetroachievements>
+            <iconManual>./art/icons/Manual.png</iconManual>
+        </menuIcons>
+
+        <menuTextEdit name="menutextedit">
+            <inactive>./main/midia/textinput_ninepatch.png</inactive>
+            <active>./main/midia/textinput_ninepatch_active.png</active>
+        </menuTextEdit>
+
+        <menuButton name="menubutton">
+            <path>./main/midia/button.png</path>
+            <filledPath>./main/midia/button_filled.png</filledPath>
+        </menuButton>
+    </view>
+
   <view name="basic">
     <image name="background" extra="true">
       <tile>false</tile>
@@ -411,7 +525,7 @@ Année de sortie : ${system.releaseYear}</text>
       <color>FFFFFFFF</color>
       <pos>0.5 0.5</pos>
       <origin>0.5 0.5</origin>
-      <minSize>1 1</minSize>
+      <size>1 1</size>
       <zIndex>13</zIndex>
     </image>
     <image name="md_fanart" extra="true">
@@ -453,12 +567,10 @@ Année de sortie : ${system.releaseYear}</text>
          <zIndex>36</zIndex>
       </image>
       <image name="md_marquee">
-         <pos>0.76 0.16</pos>
-         <size>0.25 0</size>
+         <pos>0.87 0.55</pos>
+         <maxSize>0.25 0.25</maxSize>
          <zIndex>36</zIndex>
       </image>
-  </view>
-  <view name="detailed">
     <video name="md_video">
       <pos>0.76 0.408</pos>
       <maxSize>0.46 0.436</maxSize>
@@ -469,14 +581,14 @@ Année de sortie : ${system.releaseYear}</text>
       <loops>1</loops>
       <roundCorners>0.02</roundCorners>
     </video>
-    <image name="background" extra="true">
+    <image name="background" extra="static">
       <tile>false</tile>
       <linearSmooth>true</linearSmooth>
       <path>./art/background/${system.theme}.jpg</path>
       <color>FFFFFFFF</color>
       <pos>0.5 0.5</pos>
       <origin>0.5 0.5</origin>
-      <minSize>1 1</minSize>
+      <size>1 1</size>
       <zIndex>11</zIndex>
     </image>
     <image name="md_fanart" extra="true">
@@ -494,6 +606,7 @@ Année de sortie : ${system.releaseYear}</text>
       <size>0.525 0.853</size>
       <origin>0 0</origin>
       <path>./art/dark.png</path>
+      <color>${baseColor}99</color>
       <linearSmooth>true</linearSmooth>      
       <zIndex>15</zIndex>
     </image>
@@ -503,11 +616,19 @@ Année de sortie : ${system.releaseYear}</text>
       <size>0.51 0.33</size>
       <origin>0 0</origin>
       <path>./art/darkwheel.png</path>
+      <color>${baseColor}99</color>
       <linearSmooth>true</linearSmooth>      
       <zIndex>15</zIndex>
     </image>
+    <text name="md_genre">
+      <color>ffffff</color>
+      <pos>0.360 0.875</pos>
+      <forceUppercase>0</forceUppercase>
+      <fontPath>./art/Cabin-Bold.ttf</fontPath>
+      <fontSize>0.023</fontSize>
+    </text>
     <text name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_players, md_players, md_lbl_releasedate">
-      <color>000000</color>
+      <color>ffffff</color>
       <forceUppercase>0</forceUppercase>
       <fontPath>./art/Cabin-Bold.ttf</fontPath>
       <fontSize>0.023</fontSize>
@@ -516,7 +637,7 @@ Année de sortie : ${system.releaseYear}</text>
       <pos>1 1</pos>
     </text>
     <datetime name="md_lastplayed, md_releasedate">
-      <color>000000</color>
+      <color>ffffff</color>
       <forceUppercase>0</forceUppercase>
       <fontPath>./art/Cabin-Bold.ttf</fontPath>
       <fontSize>0.023</fontSize>
@@ -543,16 +664,16 @@ Année de sortie : ${system.releaseYear}</text>
       <unfilledColor>808080</unfilledColor>
     </rating>
     <text name="md_lbl_players">
-      <pos>0.9 0.645</pos>
-      <size>0.09 0</size>
+      <pos>0.8 0.645</pos>
+      <size>0.19 0</size>
     </text>
     <text name="md_players">
       <color>EFEFFF</color>
-      <pos>0.965 0.645</pos>
-      <size>0.02 0</size>
+      <pos>0.9 0.645</pos>
+      <size>0.19 0</size>
     </text>
     <text name="md_lbl_releasedate">
-      <color>000000</color>
+      <color>ffffff</color>
       <pos>0.53 0.645</pos>
       <size>0.2 0</size>
     </text>
@@ -564,7 +685,7 @@ Année de sortie : ${system.releaseYear}</text>
     <text name="md_description">
       <pos>0.530 0.7</pos>
       <size>0.46 0.16</size>
-      <color>000000</color>
+      <color>ffffff</color>
       <forceUppercase>0</forceUppercase>
       <fontPath>./art/Cabin-Bold.ttf</fontPath>
       <fontSize>0.023</fontSize>
@@ -572,7 +693,7 @@ Année de sortie : ${system.releaseYear}</text>
     <textlist name="gamelist">
       <selectorColor>${baseColor}</selectorColor>
       <selectedColor>ffffff</selectedColor>
-      <primaryColor>000000</primaryColor>
+      <primaryColor>ffffff</primaryColor>
       <secondaryColor>c1c1c1</secondaryColor>
       <fontPath>./art/Cabin-Bold.ttf</fontPath>
       <forceUppercase>1</forceUppercase>
@@ -664,12 +785,12 @@ Année de sortie : ${system.releaseYear}</text>
     </text>
     <image name="logo">
       <!-- try png -->
-      <path>./art/logos-collor/${system.theme}.png</path>
-      <path>./art/logos-collor/${system.theme}.svg</path>
-      <path>./art/logos-collor/${system.theme}-${lang}.png</path>
-      <path>./art/logos-collor/${system.theme}-${lang}.svg</path>
+      <path>./art/logos-color/${system.theme}.png</path>
+      <path>./art/logos-color/${system.theme}.svg</path>
+      <path>./art/logos-color/${system.theme}-${lang}.png</path>
+      <path>./art/logos-color/${system.theme}-${lang}.svg</path>
       <!-- if system2 exists, take this version -->
-      <path>./art/logos-collor/${system.theme}2.svg</path>
+      <path>./art/logos-color/${system.theme}2.svg</path>
       <!--<pos>0.266 0.074</pos><maxSize>0.460 0.126</maxSize>-->
       <pos>0.5 0.074</pos>
       <maxSize>0.3 0.120</maxSize>
@@ -678,13 +799,13 @@ Année de sortie : ${system.releaseYear}</text>
 
     <image name="logo" region="eu"></image>
 		<image name="logo" region="us">
-		  <path>./art/logos-collor/us/${system.theme}.png</path>
-			<path>./art/logos-collor/us/${system.theme}.svg</path>
+		  <path>./art/logos-color/us/${system.theme}.png</path>
+			<path>./art/logos-color/us/${system.theme}.svg</path>
 		</image>
 		
 		<image name="logo" region="jp">
-		  <path>./art/logos-collor/jp/${system.theme}.png</path>
-			<path>./art/logos-collor/jp/${system.theme}.svg</path>
+		  <path>./art/logos-color/jp/${system.theme}.png</path>
+			<path>./art/logos-color/jp/${system.theme}.svg</path>
 		</image>
 		    
     <text name="folderpath">
@@ -706,7 +827,7 @@ Année de sortie : ${system.releaseYear}</text>
       <color>FFFFFFFF</color>
       <pos>0.5 0.5</pos>
       <origin>0.5 0.5</origin>
-      <minSize>1 1</minSize>
+      <size>1 1</size>
       <zIndex>0</zIndex>
     </image>
     <image name="md_fanart" extra="true">
@@ -722,7 +843,7 @@ Année de sortie : ${system.releaseYear}</text>
       <color>A0A0B000</color>
     </text>
     <text name="md_developer, md_publisher, md_genre, md_players, md_playcount, md_description">
-      <color>ffffff00</color>
+      <color>ffffff</color>
     </text>
     <datetime name="md_releasedate, md_lastplayed">
       <color>ffffff00</color>
@@ -811,7 +932,7 @@ Année de sortie : ${system.releaseYear}</text>
       <color>FFFFFFFF</color>
       <pos>0.5 0.5</pos>
       <origin>0.5 0.5</origin>
-      <minSize>1 1</minSize>
+      <size>1 1</size>
       <zIndex>0</zIndex>
     </image>
     <image name="md_fanart" extra="true">
@@ -850,7 +971,7 @@ Année de sortie : ${system.releaseYear}</text>
       <color>FFFFFFFF</color>
       <pos>0.5 0.5</pos>
       <origin>0.5 0.5</origin>
-      <minSize>1 1</minSize>
+      <size>1 1</size>
       <zIndex>0</zIndex>
     </image>
     <image name="md_fanart" extra="true">
@@ -926,7 +1047,7 @@ Année de sortie : ${system.releaseYear}</text>
       <color>FFFFFFFF</color>
       <pos>0.5 0.5</pos>
       <origin>0.5 0.5</origin>
-      <minSize>1 1</minSize>
+      <size>1 1</size>
       <zIndex>0</zIndex>
     </image>
     <image name="md_fanart" extra="true">
@@ -1051,6 +1172,10 @@ Année de sortie : ${system.releaseYear}</text>
   </subset>
   <subset name="marqueetiles" displayName="Logos" appliesTo="Tiles">
     <include name="yes" displayName="${yes}">./art/tiles/marquee.xml</include>
+    <include name="no" displayName="${no}"/>
+  </subset>
+  <subset name="storyboards" displayName="${animationsSubsetName}">
+    <include name="yes" displayName="${yes}">./art/storyboards.xml</include>
     <include name="no" displayName="${no}"/>
   </subset>
 </theme>
