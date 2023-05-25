@@ -1,8 +1,8 @@
 <theme> 
-<formatVersion>7</formatVersion>
+<formatVersion>7</formatVersion> 
   <view name="screen">
      <text name="username" extra="static">
-      <text>${cheevos.username}</text>
+      <text>${global.netplay.username}</text>
          <pos>0.779 0.080</pos>
          <size>0.165 0.035</size>
          <color>ffffff</color>
