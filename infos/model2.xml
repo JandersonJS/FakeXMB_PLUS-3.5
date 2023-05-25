@@ -1,23 +1,23 @@
 <theme>
 	<formatVersion>7</formatVersion>
 
-	<view name="system">
+	<view name="system, basic, detailed, grid, Tiles, Carousel, Boxes, grid">
 				
 				<text name="system_description" extra="true">
-				<text>The Sega Model 2 (モデル2) is an arcade system board originally debuted by Sega in 1993 as a successor to the Sega Model 1 board. It is an extension of the Model 1 hardware, most notably introducing the concept of texture-mapped polygons, allowing for more realistic 3D graphics for its time.</text>
+				<text>Sega Model 2 was a arcade system board developed by Sega AM2 in 1993 as a direct evolution of the earlier Model 1. The board was state-of-the-art for its time, costing $2,000,000 to develop. The system would power arcade hits of the mid-1990s such as Daytona USA, Virtua Fighter 2 and The House of The Dead.</text>
 			</text>
 		
 				<text name="system_description" extra="true" lang="es">
-				<text>La Sega Model 2 (モデル2) es una placa de sistema arcade presentada originalmente por Sega en 1993 como sucesora de la placa Sega Model 1. Es una extensión del hardware del Modelo 1, que presenta sobre todo el concepto de polígonos mapeados con textura, lo que permite gráficos 3D más realistas para su época.</text>
+				<text>Sega Model 2 era una placa de sistema arcade desarrollada por Sega AM2 en 1993 como una evolución directa del Model 1 anterior. La placa era lo último en tecnología para su época y su desarrollo costó $ 2,000,000. El sistema impulsaría éxitos arcade de mediados de la década de 1990, como Daytona USA, Virtua Fighter 2 y The House of The Dead.</text>
 		</text>
 		
 				<text name="system_description" extra="true" lang="fr">
-				<text>Le Sega Model 2 (モ デ ル 2) est une carte système d'arcade lancée à l'origine par Sega en 1993 en tant que successeur de la carte Sega Model 1. Il s'agit d'une extension du matériel du modèle 1, introduisant notamment le concept de polygones à texture mappée, permettant des graphismes 3D plus réalistes pour l'époque.</text>
+				<text>Sega Model 2 était une carte système d'arcade développée par Sega AM2 en 1993 comme une évolution directe de l'ancien modèle 1. La carte était à la pointe de la technologie pour l'époque, coûtant 2 000 000 $ à développer. Le système alimenterait les succès d'arcade du milieu des années 1990 tels que Daytona USA, Virtua Fighter 2 et The House of The Dead.</text>
 		</text>
 
 	
 		<text name="system_description" extra="true" lang="pt">
-				<text>A Sega Model 2 (モデル2) é uma placa de sistema de arcade originalmente lançada pela Sega em 1993 como sucessora da placa Sega Model 1. É uma extensão do hardware do Modelo 1, principalmente introduzindo o conceito de polígonos mapeados por textura, permitindo gráficos 3D mais realistas para a época.</text>
+				<text>Sega Model 2 era uma placa de sistema de arcade desenvolvida pela Sega AM2 em 1993 como uma evolução direta do anterior Model 1. A placa era de última geração para a época, custando $ 2.000.000 para ser desenvolvida. O sistema alimentaria sucessos de fliperama de meados da década de 1990, como Daytona USA, Virtua Fighter 2 e The House of The Dead.</text>
 		</text>
 		
 				

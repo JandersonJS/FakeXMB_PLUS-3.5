@@ -1,33 +1,24 @@
 <theme>
 	<formatVersion>7</formatVersion>
 
-	<view name="system">
+	<view name="system, basic, detailed, grid, Tiles, Carousel, Boxes, grid">
 
 		
 
 
 		<text name="system_description" extra="true">
-			<text>Custom collections.</text>
+			<text></text>
 		</text>
-
-		<text name="system_description" extra="true" lang="es">
-			<text>Colecciones personalizadas.</text>
-		</text>
-
-
-
-
-				
 
 		<text name="system_name" extra="true">
 			
-			<text>Collections</text>
+			<text>Custom Collections</text>
 			
 		</text>
 								
 		<text name="system_name" extra="true" lang="es">
 			
-			<text>Colecciones</text>
+			<text>Colecciones Personalizadas</text>
 			
 		</text>
 

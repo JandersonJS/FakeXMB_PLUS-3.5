@@ -1,33 +1,32 @@
 <theme>
 	<formatVersion>7</formatVersion>
 
-	<view name="system">
+	<view name="system, basic, detailed, grid, Tiles, Carousel, Boxes, grid">
+	    
+
+		<text name="system_description" extra="true" >
+			<text>HBMAME stands for Home Brew MAME. It runs on Windows 7 SP1 or later. HBMAME has 2 purposes: Firstly is to preserve homebrew games written for arcade machines or arcade emulators. Secondly is to include worthwhile hacks of arcade games.</text>
+		</text>
+
+		<text name="system_description" extra="true" lang="fr" >
+			<text>HBMAME signifie Home Brew MAME. Il fonctionne sur Windows 7 SP1 ou version ultérieure. HBMAME a 2 objectifs : premièrement, il s'agit de préserver les jeux homebrew écrits pour les machines d'arcade ou les émulateurs d'arcade. Deuxièmement, il faut inclure des hacks intéressants de jeux d'arcade.</text>
+		</text>
 
 		
-				<text name="system_description" extra="true">
-			<text>Multiple Arcade Machine Emulator is a free and open source emulator designed to recreate the hardware of arcade game systems in software on modern personal computers and other platforms.</text>
-		</text>
-		
-				<text name="system_description" extra="true" lang="es" >
-				<text>MAME (Originalmente un acrónimo de «Multiple Arcade Machine Emulator») es un emulador multipropósito de máquinas recreativas, libre y de código abierto, que replica el hardware de estos equipos para su funcionamiento en ordenadores y otros tipos de dispositivos.
+		<text name="system_description" extra="true" lang="es">
+			<text>HBMAME significa Home Brew MAME. Se ejecuta en Windows 7 SP1 o posterior. HBMAME tiene 2 propósitos: en primer lugar, es preservar los juegos caseros escritos para máquinas recreativas o emuladores de arcade. En segundo lugar, incluir hacks de juegos de arcade que valgan la pena.
 
-El objetivo del proyecto es preservar décadas de historia del software, que de otra manera se perdería o sería olvidado.</text>
-		</text>
-		
-				<text name="system_description" extra="true" lang="fr">
-			<text>Multiple Arcade Machine Emulator, est un logiciel d'émulation pour PC dont le but est de reproduire fidèlement le fonctionnement des jeux et des systèmes d'arcade afin de préserver l'histoire du jeu vidéo.</text>
+</text>
 		</text>
 
-				<text name="system_description" extra="true" lang="pt">
-			<text>MAME significa Multiple Arcade Machine Emulator - Emulador de Múltiplas Máquinas de Arcade, em português. O MAME irá reproduzir, mais ou menos fielmente, o jogo em sua máquina.</text>
+		<text name="system_description" extra="true" lang="pt" >
+			<text>HBMAME significa Home Brew MAME. Ele é executado no Windows 7 SP1 ou posterior. HBMAME tem 2 propósitos: Em primeiro lugar, é preservar os jogos homebrew escritos para máquinas de fliperama ou emuladores de fliperama. Em segundo lugar, é incluir hacks valiosos de jogos de arcade.</text>
 		</text>
-
-
 		
 				
 
 		<text name="system_name" extra="true">
-			<text>Arcade M.A.M.E.</text>
+			<text>HBMAME</text>
 		</text>
 	</view>
 </theme>

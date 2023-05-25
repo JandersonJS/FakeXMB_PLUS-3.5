@@ -1,8 +1,7 @@
-<!-- Theme by pajarorrojo-->
 <theme>
 	<formatVersion>7</formatVersion>
 
-	<view name="system">
+	<view name="system, basic, detailed, grid, Tiles, Carousel, Boxes, grid">
 
 		
 		<text name="system_description" extra="true" >
@@ -26,7 +25,7 @@ Pertenece a la sexta generación de consolas. El sistema fue el primero en tener
 				
 
 		<text name="system_name" extra="true">
-			<text>Sega Dreamcast</text>
+			<text>Dreamcast</text>
 		</text>
 	</view>
 </theme>
