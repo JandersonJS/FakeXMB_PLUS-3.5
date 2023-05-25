@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
-Theme: FakeXMB_PLUS
-version: 3.0
+The FakeXMB was made to look like the official Playstation 3 XMB, and has an information bar very similar to the Top-Info of the Playstation-X theme.
+It has monochrome logos in the system view, used in various themes and with various colors, in our case just gray, used mainly in RVGM-BT.
+FakeXMB is a free theme and can be used on your preferred system.
+Enjoy!
+Special thanx: Pajarorojo, Fabrice Caruso and Darknior.
+Theme: FakeXMB
 author: LordOgro
 license: creative commons CC-BY-NC-SA
-originally based on: Carbon 2.0
 -->
 <theme defaultView="detailed">
   <formatVersion>7</formatVersion>
